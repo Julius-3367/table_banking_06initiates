@@ -1,0 +1,25 @@
+table_banking_system/
+├── app.py                      # Main application file
+├── requirements.txt            # Dependencies list
+├── config.py                   # Configuration settings (database, email, etc.)
+├── static/                     # Folder for static files (CSS, JS, Images)
+│   ├── css/
+│   │   └── style.css           # Main CSS file for styling
+│   ├── js/
+│   │   └── script.js           # Main JavaScript file for interactions
+├── templates/                  # HTML templates for the web pages
+│   ├── base.html               # Base template for consistent layout
+│   ├── login.html              # Login page template
+│   ├── signup.html             # Signup page template
+│   ├── forgot_password.html    # Forgot password page template
+│   ├── dashboard/              # Folder for user role-specific dashboards
+│   │   ├── admin_dashboard.html
+│   │   ├── chairman_dashboard.html
+│   │   ├── treasurer_dashboard.html
+│   │   └── member_dashboard.html
+├── database/
+│   └── db.py                   # MongoDB connection and database operations
+├── utils/
+│   ├── auth.py                 # Authentication and password hashing
+│   └── email_service.py        # Email handling for password reset
+

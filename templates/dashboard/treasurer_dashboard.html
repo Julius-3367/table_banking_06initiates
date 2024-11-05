@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Treasurer Dashboard</h2>
+<h3>Deposits</h3>
+<table>
+    <tr><th>Member</th><th>Amount</th><th>Date</th></tr>
+    {% for deposit in deposits %}
+    <tr><td>{{ deposit.member_id }}</td><td>{{ deposit.amount }}</td><td>{{ deposit.timestamp }}</td></tr>
+    {% endfor %}
+</table>
+<h3>Pending Loans</h3>
+<table>
+    <tr><th>Member</th><th>Principal</th><th>Actions</th></tr>
+    {% for loan in pending_loans %}
+    <tr>
+        <td>{{ loan.member_id }}</td><td>{{ loan.principal }}</td>
+        <td><a href="#">Approve</a> | <a href="#">Reject</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+

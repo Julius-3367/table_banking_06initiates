@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Chairman Dashboard</h2>
+<p>Total Funds: {{ total_funds }}</p>
+<h3>Member Contributions</h3>
+<table>
+    <tr><th>Member</th><th>Amount</th><th>Date</th></tr>
+    {% for contrib in contributions %}
+    <tr><td>{{ contrib.member_id }}</td><td>{{ contrib.amount }}</td><td>{{ contrib.timestamp }}</td></tr>
+    {% endfor %}
+</table>
+<h3>Loans</h3>
+<table>
+    <tr><th>Member</th><th>Principal</th><th>Status</th></tr>
+    {% for loan in loans %}
+    <tr><td>{{ loan.member_id }}</td><td>{{ loan.principal }}</td><td>{{ loan.status }}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
